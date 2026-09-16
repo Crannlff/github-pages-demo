@@ -3,26 +3,177 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>GitHub Pages Demo</title>
+    <title>杭州旅游攻略</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="app">
+    <header class="site-header">
+      <a class="brand" href="#top">杭州旅游攻略</a>
+      <nav class="site-nav" aria-label="页面导航">
+        <a href="#route">路线</a>
+        <a href="#places">景点</a>
+        <a href="#food">美食</a>
+        <a href="#tips">提醒</a>
+      </nav>
+    </header>
+
+    <main id="top">
       <section class="hero" aria-labelledby="page-title">
-        <p class="eyebrow">From local code to public web</p>
-        <h1 id="page-title">我的第一个公网发布项目</h1>
-        <p class="intro">
-          这个页面从本地代码开始，经过 Git 提交、GitHub 上传，最后由
-          GitHub Pages 发布到公网。
-        </p>
-        <button id="celebrate-button" type="button">点我测试 JavaScript</button>
+        <div class="hero-content">
+          <p class="eyebrow">3 天 2 晚 · 西湖 · 灵隐 · 运河</p>
+          <h1 id="page-title">杭州旅游攻略</h1>
+          <p class="intro">
+            适合第一次来杭州的人：把西湖的清晨、灵隐的山色、河坊街的烟火气和西溪的慢节奏串成一条轻松路线。
+          </p>
+          <a class="primary-link" href="#route">查看推荐路线</a>
+        </div>
       </section>
 
-      <section class="status" aria-live="polite">
-        <h2>当前状态</h2>
-        <p id="status-text">页面已加载，本地预览成功。</p>
+      <section class="quick-facts" aria-label="旅行概要">
+        <article>
+          <span>建议天数</span>
+          <strong>3 天 2 晚</strong>
+        </article>
+        <article>
+          <span>住宿区域</span>
+          <strong>湖滨 / 武林 / 龙翔桥</strong>
+        </article>
+        <article>
+          <span>旅行节奏</span>
+          <strong>早出发，午后放慢</strong>
+        </article>
+        <article>
+          <span>适合人群</span>
+          <strong>第一次到杭州</strong>
+        </article>
+      </section>
+
+      <section id="route" class="section route-section">
+        <div class="section-heading">
+          <p class="eyebrow">Itinerary</p>
+          <h2>推荐路线</h2>
+          <p>用三天把杭州的经典面、文化面和松弛面都走到。每天不要塞太满，杭州更适合慢慢看。</p>
+        </div>
+
+        <div class="day-tabs" role="tablist" aria-label="选择天数">
+          <button class="day-tab active" type="button" data-day="day1" role="tab" aria-selected="true">
+            Day 1
+          </button>
+          <button class="day-tab" type="button" data-day="day2" role="tab" aria-selected="false">
+            Day 2
+          </button>
+          <button class="day-tab" type="button" data-day="day3" role="tab" aria-selected="false">
+            Day 3
+          </button>
+        </div>
+
+        <div class="day-panel active" id="day1" role="tabpanel">
+          <h3>西湖经典线</h3>
+          <ol class="timeline">
+            <li><strong>清晨：</strong>断桥残雪、白堤、孤山，趁人少沿湖慢走。</li>
+            <li><strong>上午：</strong>浙江省博物馆或西泠印社，给西湖加一点人文背景。</li>
+            <li><strong>下午：</strong>苏堤、花港观鱼，体力够就骑行一段。</li>
+            <li><strong>傍晚：</strong>湖滨银泰附近看夕色，晚餐安排杭帮菜。</li>
+          </ol>
+        </div>
+
+        <div class="day-panel" id="day2" role="tabpanel" hidden>
+          <h3>灵隐与老杭州</h3>
+          <ol class="timeline">
+            <li><strong>上午：</strong>灵隐寺、飞来峰，尽量早到，山门一带更安静。</li>
+            <li><strong>中午：</strong>法云安缦周边或灵隐路附近吃素面、茶点。</li>
+            <li><strong>下午：</strong>龙井村、满觉陇，天气好就留时间喝茶。</li>
+            <li><strong>晚上：</strong>河坊街、南宋御街，适合散步和买伴手礼。</li>
+          </ol>
+        </div>
+
+        <div class="day-panel" id="day3" role="tabpanel" hidden>
+          <h3>湿地与运河</h3>
+          <ol class="timeline">
+            <li><strong>上午：</strong>西溪湿地，选择一条短线慢逛，别急着赶景点。</li>
+            <li><strong>下午：</strong>小河直街或拱宸桥，感受运河边的生活气。</li>
+            <li><strong>傍晚：</strong>武林门码头附近散步，找一家小店收尾。</li>
+            <li><strong>返程：</strong>预留 2 小时以上去车站或机场。</li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="places" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Highlights</p>
+          <h2>必去景点</h2>
+        </div>
+
+        <div class="place-grid">
+          <article class="place-card">
+            <span class="place-tag">经典</span>
+            <h3>西湖</h3>
+            <p>杭州的第一站。建议把白堤、苏堤、孤山、花港观鱼拆开走，清晨和傍晚最舒服。</p>
+          </article>
+          <article class="place-card">
+            <span class="place-tag">人文</span>
+            <h3>灵隐寺与飞来峰</h3>
+            <p>山林、古寺和石刻集中在一起，适合安排半天，早到体验会好很多。</p>
+          </article>
+          <article class="place-card">
+            <span class="place-tag">烟火</span>
+            <h3>河坊街与南宋御街</h3>
+            <p>老街商业化明显，但很适合第一次来时感受夜晚热闹，也方便买小礼物。</p>
+          </article>
+          <article class="place-card">
+            <span class="place-tag">慢游</span>
+            <h3>西溪湿地</h3>
+            <p>适合不赶路的一天，水道、芦苇、栈道和船线会让行程松下来。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="food" class="section split-section">
+        <div>
+          <p class="eyebrow">Food</p>
+          <h2>吃什么</h2>
+          <ul class="clean-list">
+            <li><strong>杭帮菜：</strong>西湖醋鱼、龙井虾仁、东坡肉、宋嫂鱼羹。</li>
+            <li><strong>小吃：</strong>葱包桧、定胜糕、片儿川、知味小笼。</li>
+            <li><strong>喝茶：</strong>龙井村、满觉陇、梅家坞都适合慢坐。</li>
+          </ul>
+        </div>
+        <div>
+          <p class="eyebrow">Stay</p>
+          <h2>住哪里</h2>
+          <ul class="clean-list">
+            <li><strong>湖滨 / 龙翔桥：</strong>去西湖方便，晚上吃饭选择多。</li>
+            <li><strong>武林广场：</strong>交通省心，去运河、西湖都比较均衡。</li>
+            <li><strong>黄龙 / 文三：</strong>预算更灵活，适合不追求住在湖边的人。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="tips" class="section tips-section">
+        <div class="section-heading">
+          <p class="eyebrow">Notes</p>
+          <h2>出行提醒</h2>
+        </div>
+        <div class="tips-grid">
+          <article>
+            <h3>避开拥挤</h3>
+            <p>西湖核心点位周末和节假日人很多，早上 8 点前到湖边会舒服不少。</p>
+          </article>
+          <article>
+            <h3>交通方式</h3>
+            <p>市区优先地铁、步行和骑行。西湖边部分道路打车不一定比走路快。</p>
+          </article>
+          <article>
+            <h3>天气准备</h3>
+            <p>杭州湿度高，夏天注意防晒和补水，春秋早晚带一件轻外套。</p>
+          </article>
+        </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <p>照片：West Lake, Hangzhou by Mark Tollerman，CC BY 2.0。</p>
+    </footer>
 
     <script src="script.js"></script>
   </body>
